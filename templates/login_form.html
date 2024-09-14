@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{%  block contents %}
+<h3>Please Login</h3>
+<div class="form_block">
+
+<form action="/login/try" method="POST" class="pure-form pure-form-stacked">
+        <label id="user">User name</label>
+        <input type="text" name="user" id="user" placeholder="user name">
+        <label for="pw">Password</label>
+        <input type="password" name="pw" id="pw" placeholder="password">
+        <button type="submit" class="pure-button pure-button-primary">Login</button>
+</form>
+</div>
+
+{% endblock %}

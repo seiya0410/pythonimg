@@ -1,0 +1,16 @@
+{% extends "layout_login.html"%}
+
+{% block title %}
+{{ id }} <br> works
+{% endblock %}
+
+{% block contents %}
+<div style="padding: 12px;">
+{% for i in photos %}
+<div class="photo" style="float:left;width: 160px;">
+        <img src="/photo/{{ i.file_id }}?t=thumb" width="150"><br>
+        <span class="datetime">{{ i.created_at }}</span>
+    </div>
+{% endfor %}
+<div style="clear: both;"></div>
+{% endblock %}

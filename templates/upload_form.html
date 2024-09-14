@@ -1,0 +1,38 @@
+{% extends "layout_login.html" %}
+
+{% block title %}
+Share image <br>upload
+{% endblock %}
+
+{% block contents %}
+
+<div class="box">
+<form action="/upload/try" method="POST" class="pure-form pure-form-stacked" enctype="multipart/form-data">
+    <legend>Select your photo</legend>
+        <div class="pure-control-group">
+            <label for="upload">select jpeg</label>
+            <input type="file" name="upfile" id="upfile">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="album">select album:</label>
+            <select name="album" id="album">
+                <option value="0">none</option>
+                {%for i in albums %}
+                <option value="{{ i.album_id }}">{{ i.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+    <div class="pure-controls">
+        <button type="submit" class="pure-button pure-button-primary">upload</button>
+    </div>
+</form>
+</div>
+
+<div class="box">
+ <p>make a album</p>
+ <a class="pure-button" href="/album/new">new album</a>
+</div>
+<br>
+{% endblock %}

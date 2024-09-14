@@ -1,0 +1,16 @@
+{% extends "layout_login.html"%}
+
+{% block title %}
+Share image <br>Create a new album
+{% endblock %}
+
+{% block contents %}
+
+<div class="form_block">
+<form action="/album/new/try" method="GET" class="pure-form pure-form-stacked">
+        <label for="name">new album</label>
+        <input type="text" name="name" id="name" placeholder="album name">
+        <button type="submit" class="pure-button pure-button-primary">Create</button>
+</form>
+</div>
+{% endblock %}

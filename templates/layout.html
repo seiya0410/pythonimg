@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/pure-min.css">
+    <link rel="stylesheet" href="static/side-menu.css?v=0220">
+    <link rel="stylesheet" type='text/css' href="{{ staticfile('style.css') }}">
+    <title>Image share</title>
+</head>
+<body>
+    <div id="layout" class="page">
+        {% block header%}
+    <!-- header-->
+        {% endblock %}
+
+    <div id="main">
+    <div class="header">
+        <h1>{% block title %} image share {% endblock %}</h1>
+    </div>
+
+    {% block contents %}
+    {% endblock %}
+
+    {% block footer%}
+    <div class="footer%">
+        <a href="/" class="pure-button">Top page</a>
+    {% endblock %}
+</div>
+</div>
+
+
+{% block footer_script%}
+{% endblock %}
+</body></html>
+
