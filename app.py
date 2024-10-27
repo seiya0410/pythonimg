@@ -30,6 +30,7 @@ def index():
                            id=user.get_id(),
                            photos=photo_db.get_files())
 
+
 #list the photos in the album
 @app.route('/album/<album_id>')
 @user.login_required
